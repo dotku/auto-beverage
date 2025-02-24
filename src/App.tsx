@@ -2,11 +2,11 @@ import { Coffee, ShoppingCart, Award, Clock, Settings, Shield, Droplets, Sparkle
 import { formatChineseCurrency } from './utils';
 
 type Seller = { 
-  helen: string;
-  leo: string;
+  [key: string]: string;
 }
 
 const sellers: Seller = {
+  "hellen": "wxid_mshnxf7rr89o22",
   "helen": "wxid_mshnxf7rr89o22",
   "leo": "xinmai002leo"
 }

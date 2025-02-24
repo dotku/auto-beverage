@@ -213,7 +213,7 @@ function App() {
             <Sparkles className="h-6 w-6 mr-2" />
             <span className="text-xl font-bold">智饮未来</span>
           </div>
-          <p className="text-gray-400">© 2025 智饮未来科技. 保留所有权利</p>
+          <p className="text-gray-400">© 2025 智饮未来科技. 保留所有权利 v0.1.0</p>
         </div>
       </footer>
     </div>

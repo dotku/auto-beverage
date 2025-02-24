@@ -1,4 +1,5 @@
 import { Coffee, ShoppingCart, Award, Clock, Settings, Shield, Droplets, Sparkles, Zap } from 'lucide-react';
+import { formatChineseCurrency } from './utils';
 
 type Seller = { 
   helen: string;
@@ -118,7 +119,7 @@ function App() {
                     </ul>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-blue-600">¥{product.price}</span>
+                    <span className="text-2xl font-bold text-blue-600">{formatChineseCurrency(product.price)}</span>
                     <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                       立即咨询
                     </button>

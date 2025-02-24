@@ -1,5 +1,14 @@
-import React from 'react';
 import { Coffee, ShoppingCart, Award, Clock, Settings, Shield, Droplets, Sparkles, Zap } from 'lucide-react';
+
+type Seller = { 
+  helen: string;
+  leo: string;
+}
+
+const sellers: Seller = {
+  "helen": "wxid_mshnxf7rr89o22",
+  "leo": "xinmai002leo"
+}
 
 function App() {
   const products = [
@@ -20,6 +29,9 @@ function App() {
       image: "https://images.unsplash.com/photo-1514066558159-fc8c737ef259?auto=format&fit=crop&q=80&w=1200"
     }
   ];
+
+  const query = new URLSearchParams(window.location.search);
+  const seller = query.get("seller");
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -173,11 +185,16 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
+     
+
       <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">开启智能饮品新时代</h2>
           <p className="text-xl mb-8">联系我们，了解更多产品信息和合作方案</p>
+          <div className="text-lg mb-8">
+            {seller ? <p>📧 微信：{sellers[seller.toLocaleLowerCase() as keyof Seller]}</p> : null}
+            <p>📍 地址：广东深圳</p>
+          </div>
           <div className="inline-flex space-x-4">
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
               预约演示

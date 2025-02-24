@@ -73,13 +73,7 @@ function App() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">产品演示</h2>
           <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/PE0owEjjAl8"
-              title="Automated Beverage Machine Demo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <video src="/5022_1740374424.mp4" className="w-full h-full" controls />
           </div>
           <div className="text-center mt-8">
             <p className="text-xl text-gray-300">
